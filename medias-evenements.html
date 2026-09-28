@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Médias &amp; Événements — OpenCloud SN</title>
+<meta name="description" content="Photos, vidéos et événements d'OpenCloud SN : formations, déploiements, séminaires et vie d'équipe.">
+<link rel="icon" type="image/png" href="images/logo_open.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container-xl d-flex align-items-center justify-content-between">
+    <a href="index.html" class="brand"><img src="images/logo_open.png" alt="OpenCloud SN" class="brand-logo">OpenCloud</a>
+
+    <nav class="d-none d-lg-flex align-items-center">
+      <a href="index.html#a-propos" class="nav-link-custom">À propos</a>
+      <a href="index.html#business-units" class="nav-link-custom">Pôles</a>
+      <a href="index.html#services" class="nav-link-custom">Services</a>
+      <div class="nav-dropdown dropdown">
+        <button class="nav-link-custom nav-dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Ressources<span class="nav-dropdown-caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown-menu nav-dropdown-menu">
+          <li><a class="dropdown-item" href="medias-evenements.html">Médias &amp; Événements</a></li>
+          <li><a class="dropdown-item" href="blog-cybersecurite.html">Blog Cybersécurité</a></li>
+        </ul>
+      </div>
+      <a href="index.html#contact" class="nav-link-custom">Contact</a>
+    </nav>
+
+    <div class="d-flex align-items-center gap-3">
+      <a href="devis.html" class="btn-gold d-none d-lg-inline-flex">Demander un devis</a>
+      <button type="button" class="nav-burger d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MENU MOBILE ===================== -->
+<div class="offcanvas offcanvas-end mobile-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+  <div class="offcanvas-header">
+    <a href="index.html" class="brand" style="color:var(--paper);"><img src="images/logo_open.png" alt="OpenCloud SN" class="brand-logo" style="height:38px;">OpenCloud</a>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+  </div>
+  <div class="offcanvas-body">
+    <nav class="mobile-nav-links">
+      <a href="index.html#a-propos" data-bs-dismiss="offcanvas">À propos</a>
+      <a href="index.html#business-units" data-bs-dismiss="offcanvas">Pôles</a>
+      <a href="index.html#services" data-bs-dismiss="offcanvas">Services</a>
+      <a href="medias-evenements.html" data-bs-dismiss="offcanvas">Médias &amp; Événements</a>
+      <a href="blog-cybersecurite.html" data-bs-dismiss="offcanvas">Blog Cybersécurité</a>
+      <a href="index.html#contact" data-bs-dismiss="offcanvas">Contact</a>
+    </nav>
+
+    <div class="mobile-nav-footer">
+      <a href="devis.html" class="btn-gold" data-bs-dismiss="offcanvas">Demander un devis</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HERO CARROUSEL ===================== -->
+<!-- TODO: remplacer par de vraies photos d'événements OpenCloud -->
+<section class="media-hero" id="mediaHero">
+  <div class="media-hero-slides">
+    <div class="media-hero-slide is-active" style="background-image:url('images/opt/all.jpg');"></div>
+    <div class="media-hero-slide" style="background-image:url('images/opt/new.jpg');"></div>
+    <div class="media-hero-slide" style="background-image:url('images/picture3.jpg');"></div>
+  </div>
+  <div class="media-hero-overlay"></div>
+
+  <span class="hero-frame hero-frame-tl"></span>
+  <span class="hero-frame hero-frame-br"></span>
+
+  <div class="container-xl media-hero-content">
+    <span class="media-hero-tag" id="mediaHeroTag">Vie d'équipe</span>
+    <div class="media-hero-kicker">
+      <span class="hero-kicker-line"></span>
+      Actualités OpenCloud
+    </div>
+    <h1 class="media-hero-title">Médias &amp; <span class="hl">Événements</span></h1>
+    <p class="media-hero-sub">Retrouvez les photos, vidéos et temps forts de la vie d'OpenCloud&nbsp;: déploiements sur le terrain, formations, séminaires et rencontres avec nos clients et partenaires.</p>
+    <a href="#galerie" class="btn-gold btn-arrow">Découvrir la galerie</a>
+  </div>
+
+  <div class="media-hero-controls">
+    <div class="container-xl media-hero-controls-inner">
+      <div class="media-hero-dots" id="mediaHeroDots">
+        <button type="button" class="media-hero-dot is-active" data-slide="0" aria-label="Aller à l'image 1"></button>
+        <button type="button" class="media-hero-dot" data-slide="1" aria-label="Aller à l'image 2"></button>
+        <button type="button" class="media-hero-dot" data-slide="2" aria-label="Aller à l'image 3"></button>
+      </div>
+      <div class="media-hero-counter"><span id="mediaHeroCurrent">01</span><i>/</i>03</div>
+      <div class="media-hero-arrows">
+        <button type="button" class="media-hero-arrow" id="mediaHeroPrev" aria-label="Image précédente">&lsaquo;</button>
+        <button type="button" class="media-hero-arrow" id="mediaHeroNext" aria-label="Image suivante">&rsaquo;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALERIE ===================== -->
+<!-- TODO: remplacer les visuels et légendes par les vrais photos/vidéos/événements de l'entreprise -->
+<section id="galerie" class="section" style="background:#fff;">
+  <div class="container-xl">
+    <div class="row mb-5">
+      <div class="col-lg-7">
+        <div class="section-label">Galerie</div>
+        <h2 class="section-title mb-3">Nos temps forts en images</h2>
+        <p class="section-sub">Formations, déploiements, séminaires et vie d'équipe&nbsp;: un aperçu de la présence d'OpenCloud sur le terrain.</p>
+      </div>
+    </div>
+
+    <div class="filter-tabs-label">Explorer par catégorie</div>
+    <div class="filter-tabs" role="tablist" aria-label="Filtrer les médias">
+      <button type="button" class="filter-tab is-active" data-filter="all">Tout</button>
+      <button type="button" class="filter-tab" data-filter="evenement">Événements</button>
+      <button type="button" class="filter-tab" data-filter="photo">Photos</button>
+      <button type="button" class="filter-tab" data-filter="video">Vidéos</button>
+    </div>
+
+    <div class="row g-4 media-grid">
+      <div class="col-md-6 col-lg-4 media-item" data-category="video">
+        <div class="media-card">
+          <video muted loop playsinline preload="metadata">
+            <source src="videos/Opencloud%20reel.mp4" type="video/mp4">
+          </video>
+          <div class="media-card-play" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg>
+          </div>
+          <div class="media-card-overlay">
+            <span class="media-tag">Vidéo</span>
+            <h3 class="media-card-title">OpenCloud en mouvement</h3>
+            <span class="media-card-date">2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/picture1.jpg" alt="Portes ouvertes OpenCloud Dakar" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Portes ouvertes OpenCloud Dakar</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="photo">
+        <div class="media-card">
+          <img src="images/picture2.jpg" alt="Intervention sur site client" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Photo</span>
+            <h3 class="media-card-title">Nos équipes sur site client</h3>
+            <span class="media-card-date">Terrain</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/picture3.jpg" alt="Séminaire cybersécurité" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Séminaire cybersécurité</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="photo">
+        <div class="media-card">
+          <img src="images/picture4.jpg" alt="Déploiement infrastructure datacenter" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Photo</span>
+            <h3 class="media-card-title">Déploiement d'infrastructure</h3>
+            <span class="media-card-date">Datacenter</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="photo">
+        <div class="media-card">
+          <img src="images/picture5.jpg" alt="Session de formation VMware" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Photo</span>
+            <h3 class="media-card-title">Formation VMware en salle</h3>
+            <span class="media-card-date">Centre de formation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/picture6.jpg" alt="Salon IT Sénégal" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Participation au salon IT Sénégal</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="photo">
+        <div class="media-card">
+          <img src="images/picture7.jpg" alt="Nos experts en intervention" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Photo</span>
+            <h3 class="media-card-title">Nos experts en intervention</h3>
+            <span class="media-card-date">Terrain</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="photo">
+        <div class="media-card">
+          <img src="images/picture8.jpg" alt="Vie d'équipe OpenCloud" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Photo</span>
+            <h3 class="media-card-title">Vie d'équipe OpenCloud</h3>
+            <span class="media-card-date">Bureaux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta-band">
+  <div class="container-xl cta-band-content">
+    <div class="cta-eyebrow">Restons connectés</div>
+    <h2>Un événement à venir&nbsp;? Suivez toute l'actualité d'OpenCloud en temps réel.</h2>
+    <p class="cta-band-sub">Formations, déploiements, séminaires&nbsp;: ne manquez aucun temps fort de la vie de l'entreprise.</p>
+    <a href="index.html#contact" class="btn-gold btn-arrow">Nous contacter</a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <span class="hero-frame hero-frame-tl" aria-hidden="true"></span>
+  <span class="hero-frame hero-frame-br" aria-hidden="true"></span>
+  <span class="footer-spotlight" aria-hidden="true"></span>
+  <span class="footer-watermark" aria-hidden="true">OpenCloud</span>
+
+  <div class="container-xl">
+    <div class="footer-lead">
+      <p class="footer-lead-eyebrow">Un projet&nbsp;? Discutons-en.</p>
+      <a href="mailto:contact@opencloud.sn" class="footer-lead-email">
+        contact@opencloud.sn
+        <span class="footer-lead-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-lg-4 footer-col">
+        <div class="brand mb-2" style="color:var(--paper);">
+          <img src="images/logo_open.png" alt="OpenCloud SN" class="brand-logo brand-logo-lg">OpenCloud
+        </div>
+        <span class="footer-brand-rule"></span>
+        <p class="footer-tagline">Intégrateur de solutions IT, cloud et cybersécurité pour les entreprises sénégalaises et africaines.</p>
+
+        <div class="footer-clock">
+          <span class="footer-clock-dot" aria-hidden="true"></span>
+          <span id="footerClockTime">--:--:--</span>
+          <span class="footer-clock-tz">Heure locale · Dakar (GMT)</span>
+        </div>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" class="icon-facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="X" class="icon-x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7.2l-5.6-6.9L4 22H1l8.2-9.4L.7 2h7.4l5.1 6.3L18.9 2zm-1.3 18h2L7.5 4H5.4l12.2 16z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" class="icon-linkedin"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="icon-instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-2.7 0-3.05.01-4.12.06-1.06.05-1.79.22-2.43.47-.66.26-1.22.6-1.77 1.16-.56.55-.9 1.11-1.16 1.77-.25.64-.42 1.37-.47 2.43C2 8.95 2 9.3 2 12s.01 3.05.06 4.12c.05 1.06.22 1.79.47 2.43.26.66.6 1.22 1.16 1.77.55.56 1.11.9 1.77 1.16.64.25 1.37.42 2.43.47C8.95 22 9.3 22 12 22s3.05-.01 4.12-.06c1.06-.05 1.79-.22 2.43-.47.66-.26 1.22-.6 1.77-1.16.56-.55.9-1.11 1.16-1.77.25-.64.42-1.37.47-2.43.05-1.07.06-1.42.06-4.12s-.01-3.05-.06-4.12c-.05-1.06-.22-1.79-.47-2.43-.26-.66-.6-1.22-1.16-1.77-.55-.56-1.11-.9-1.77-1.16-.64-.25-1.37-.42-2.43-.47C15.05 2.01 14.7 2 12 2zm0 1.8c2.67 0 2.99.01 4.04.06.97.04 1.5.21 1.85.35.47.18.8.4 1.15.75.35.35.57.68.75 1.15.14.35.31.88.35 1.85.05 1.05.06 1.37.06 4.04s-.01 2.99-.06 4.04c-.04.97-.21 1.5-.35 1.85-.18.47-.4.8-.75 1.15-.35.35-.68.57-1.15.75-.35.14-.88.31-1.85.35-1.05.05-1.37.06-4.04.06s-2.99-.01-4.04-.06c-.97-.04-1.5-.21-1.85-.35-.47-.18-.8-.4-1.15-.75-.35-.35-.57-.68-.75-1.15-.14-.35-.31-.88-.35-1.85C3.81 14.99 3.8 14.67 3.8 12s.01-2.99.06-4.04c.04-.97.21-1.5.35-1.85.18-.47.4-.8.75-1.15.35-.35.68-.57 1.15-.75.35-.14.88-.31 1.85-.35C9.01 3.81 9.33 3.8 12 3.8zm0 3.05A5.15 5.15 0 1 0 17.15 12 5.15 5.15 0 0 0 12 6.85zm0 8.5A3.35 3.35 0 1 1 15.35 12 3.35 3.35 0 0 1 12 15.35zm5.35-8.7a1.2 1.2 0 1 1-1.2-1.2 1.2 1.2 0 0 1 1.2 1.2z"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2 footer-col">
+        <h5>Services</h5>
+        <p><a href="index.html#services">Audit et conseils IT</a></p>
+        <p><a href="index.html#services">Formation</a></p>
+        <p><a href="index.html#services">Déploiement Datacenter</a></p>
+        <p><a href="index.html#services">Infogérance</a></p>
+      </div>
+      <div class="col-6 col-lg-2 footer-col">
+        <h5>Entreprise</h5>
+        <p><a href="index.html#a-propos">À propos</a></p>
+        <p><a href="index.html#business-units">Pôles</a></p>
+        <p><a href="index.html#offres">Nos offres</a></p>
+        <p><a href="index.html#secteurs">Secteurs</a></p>
+        <p><a href="medias-evenements.html">Médias &amp; Événements</a></p>
+        <p><a href="blog-cybersecurite.html">Blog Cybersécurité</a></p>
+        <p><a href="index.html#contact">Contact</a></p>
+      </div>
+      <div class="col-lg-4 footer-col">
+        <h5>Restons en contact</h5>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span>Liberté 6 Extension, près de Auchan, Dakar<span class="footer-coords">14.7167° N · 17.4677° W</span></span>
+          </div>
+          <div class="footer-contact-item footer-copy" data-copy="contact@opencloud.sn" tabindex="0" role="button">
+            <span class="footer-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <span>contact@opencloud.sn</span>
+            <span class="footer-copy-hint" aria-hidden="true">Copier</span>
+          </div>
+          <div class="footer-contact-item footer-copy" data-copy="+221 77 090 19 19" tabindex="0" role="button">
+            <span class="footer-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+            <span>+221 77 090 19 19 · +221 33 823 95 92</span>
+            <span class="footer-copy-hint" aria-hidden="true">Copier</span>
+          </div>
+        </div>
+        <a href="index.html#contact" class="footer-cta">Nous écrire<span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap align-items-center justify-content-between gap-2">
+      <span>© 2025-2026 MS DIGITAL. Tous droits réservés.</span>
+      <span class="footer-legal"><a href="#">Mentions légales</a><span class="footer-dot"></span><a href="#">Conditions générales</a></span>
+      <a href="#" class="footer-top" aria-label="Retour en haut de page">
+        <span aria-hidden="true">↑</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="bootstrap.bundle.min.js"></script>
+<script>
+  var siteHeader = document.querySelector('.site-header');
+  var toggleHeader = function () {
+    siteHeader.classList.toggle('is-scrolled', window.scrollY > 40);
+  };
+  toggleHeader();
+  window.addEventListener('scroll', toggleHeader, { passive: true });
+
+  var scrollProgressEl = document.getElementById('scrollProgress');
+  if (scrollProgressEl) {
+    var updateScrollProgress = function () {
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      scrollProgressEl.style.width = pct + '%';
+    };
+    updateScrollProgress();
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    window.addEventListener('resize', updateScrollProgress);
+  }
+
+  var heroSlides = document.querySelectorAll('.media-hero-slide');
+  var heroDots = document.querySelectorAll('.media-hero-dot');
+  var heroCounter = document.getElementById('mediaHeroCurrent');
+  var heroTag = document.getElementById('mediaHeroTag');
+  var heroTags = ['Vie d\'équipe', 'Rencontre client', 'Cybersécurité'];
+  var heroCurrent = 0;
+  var heroReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var heroTimer;
+
+  var showHeroSlide = function (index) {
+    heroSlides[heroCurrent].classList.remove('is-active');
+    heroDots[heroCurrent].classList.remove('is-active');
+    heroCurrent = (index + heroSlides.length) % heroSlides.length;
+    heroSlides[heroCurrent].classList.add('is-active');
+    heroDots[heroCurrent].classList.add('is-active');
+    heroCounter.textContent = ('0' + (heroCurrent + 1)).slice(-2);
+    heroTag.classList.add('is-swapping');
+    setTimeout(function () {
+      heroTag.textContent = heroTags[heroCurrent];
+      heroTag.classList.remove('is-swapping');
+    }, heroReduceMotion ? 0 : 220);
+  };
+  var startHeroAutoplay = function () {
+    if (heroReduceMotion) return;
+    heroTimer = setInterval(function () { showHeroSlide(heroCurrent + 1); }, 6000);
+  };
+  var resetHeroAutoplay = function () {
+    clearInterval(heroTimer);
+    startHeroAutoplay();
+  };
+
+  var mediaHeroEl = document.getElementById('mediaHero');
+  if (mediaHeroEl) {
+    mediaHeroEl.addEventListener('mouseenter', function () { clearInterval(heroTimer); });
+    mediaHeroEl.addEventListener('mouseleave', resetHeroAutoplay);
+  }
+
+  if (heroSlides.length) {
+    document.getElementById('mediaHeroPrev').addEventListener('click', function () {
+      showHeroSlide(heroCurrent - 1);
+      resetHeroAutoplay();
+    });
+    document.getElementById('mediaHeroNext').addEventListener('click', function () {
+      showHeroSlide(heroCurrent + 1);
+      resetHeroAutoplay();
+    });
+    heroDots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        showHeroSlide(parseInt(dot.getAttribute('data-slide'), 10));
+        resetHeroAutoplay();
+      });
+    });
+    startHeroAutoplay();
+  }
+
+  var filterTabs = document.querySelectorAll('.filter-tab');
+  var mediaItems = document.querySelectorAll('.media-item');
+  filterTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      filterTabs.forEach(function (t) { t.classList.remove('is-active'); });
+      tab.classList.add('is-active');
+      var filter = tab.getAttribute('data-filter');
+      mediaItems.forEach(function (item) {
+        var show = filter === 'all' || item.getAttribute('data-category') === filter;
+        item.style.display = show ? '' : 'none';
+      });
+    });
+  });
+
+  document.querySelectorAll('.media-card video').forEach(function (video) {
+    video.addEventListener('mouseenter', function () { video.play(); });
+    video.addEventListener('mouseleave', function () { video.pause(); });
+  });
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---------- Footer : horloge locale Dakar ----------
+  var footerClockEl = document.getElementById('footerClockTime');
+  if (footerClockEl) {
+    var dakarFormatter = null;
+    try {
+      dakarFormatter = new Intl.DateTimeFormat('fr-FR', {
+        timeZone: 'Africa/Dakar',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+      });
+    } catch (e) {}
+    var tickClock = function () {
+      footerClockEl.textContent = dakarFormatter ? dakarFormatter.format(new Date()) : new Date().toLocaleTimeString();
+    };
+    tickClock();
+    setInterval(tickClock, 1000);
+  }
+
+  // ---------- Footer : apparition progressive des colonnes ----------
+  var footerCols = document.querySelectorAll('.footer-col');
+  if (footerCols.length) {
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      document.documentElement.classList.add('footer-reveal');
+      var footerObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            footerObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      footerCols.forEach(function (el) { footerObserver.observe(el); });
+    } else {
+      footerCols.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+  }
+
+  // ---------- Footer : effet magnétique sur les icônes rondes ----------
+  var footerEl = document.querySelector('footer');
+  var hoverCapable = window.matchMedia('(hover: hover)').matches;
+  if (!reduceMotion && hoverCapable) {
+    var magneticEls = document.querySelectorAll('.social-links a, .footer-top');
+    magneticEls.forEach(function (el) {
+      el.addEventListener('mousemove', function (e) {
+        var rect = el.getBoundingClientRect();
+        var x = e.clientX - rect.left - rect.width / 2;
+        var y = e.clientY - rect.top - rect.height / 2;
+        el.style.transform = 'translate(' + (x * 0.28) + 'px,' + (y * 0.28) + 'px)';
+      });
+      el.addEventListener('mouseleave', function () {
+        el.style.transform = '';
+      });
+    });
+  }
+
+  // ---------- Footer : halo qui suit le curseur ----------
+  if (footerEl && !reduceMotion && hoverCapable) {
+    footerEl.addEventListener('mousemove', function (e) {
+      var rect = footerEl.getBoundingClientRect();
+      footerEl.style.setProperty('--fx', ((e.clientX - rect.left) / rect.width * 100) + '%');
+      footerEl.style.setProperty('--fy', ((e.clientY - rect.top) / rect.height * 100) + '%');
+    });
+  }
+
+  // ---------- Footer : copier au clic (email / téléphone) ----------
+  var toastEl = null;
+  var showToast = function (message) {
+    if (!toastEl) {
+      toastEl = document.createElement('div');
+      toastEl.className = 'copy-toast';
+      document.body.appendChild(toastEl);
+    }
+    toastEl.textContent = message;
+    toastEl.classList.add('is-visible');
+    clearTimeout(toastEl._hideTimer);
+    toastEl._hideTimer = setTimeout(function () {
+      toastEl.classList.remove('is-visible');
+    }, 1800);
+  };
+  var copyTargets = document.querySelectorAll('.footer-copy');
+  copyTargets.forEach(function (el) {
+    var doCopy = function () {
+      var value = el.getAttribute('data-copy');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(function () {
+          showToast('Copié : ' + value);
+        }).catch(function () {
+          showToast(value);
+        });
+      } else {
+        showToast(value);
+      }
+    };
+    el.addEventListener('click', doCopy);
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doCopy(); }
+    });
+  });
+</script>
+</body>
+</html>

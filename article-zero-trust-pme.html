@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zero Trust : par où commencer quand on est une PME — Blog OpenCloud SN</title>
+<meta name="description" content="Zero Trust pour les PME : les principes, les idées reçues et une feuille de route réaliste en 6 étapes pour sécuriser chaque accès sans freiner vos équipes.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zero Trust : par où commencer quand on est une PME">
+<meta property="og:description" content="Zero Trust pour les PME : les principes, les idées reçues et une feuille de route réaliste en 6 étapes pour sécuriser chaque accès sans freiner vos équipes.">
+<meta property="og:image" content="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1800">
+<link rel="icon" type="image/png" href="images/logo_open.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container-xl d-flex align-items-center justify-content-between">
+    <a href="index.html" class="brand"><img src="images/logo_open.png" alt="OpenCloud SN" class="brand-logo">OpenCloud</a>
+
+    <nav class="d-none d-lg-flex align-items-center">
+      <a href="index.html#a-propos" class="nav-link-custom">À propos</a>
+      <a href="index.html#business-units" class="nav-link-custom">Pôles</a>
+      <a href="index.html#services" class="nav-link-custom">Services</a>
+      <div class="nav-dropdown dropdown">
+        <button class="nav-link-custom nav-dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Ressources<span class="nav-dropdown-caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown-menu nav-dropdown-menu">
+          <li><a class="dropdown-item" href="medias-evenements.html">Médias &amp; Événements</a></li>
+          <li><a class="dropdown-item" href="blog-cybersecurite.html">Blog Cybersécurité</a></li>
+        </ul>
+      </div>
+      <a href="index.html#contact" class="nav-link-custom">Contact</a>
+    </nav>
+
+    <div class="d-flex align-items-center gap-3">
+      <a href="devis.html" class="btn-gold d-none d-lg-inline-flex">Demander un devis</a>
+      <button type="button" class="nav-burger d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MENU MOBILE ===================== -->
+<div class="offcanvas offcanvas-end mobile-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+  <div class="offcanvas-header">
+    <a href="index.html" class="brand" style="color:var(--paper);"><img src="images/logo_open.png" alt="OpenCloud SN" class="brand-logo" style="height:38px;">OpenCloud</a>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+  </div>
+  <div class="offcanvas-body">
+    <nav class="mobile-nav-links">
+      <a href="index.html#a-propos" data-bs-dismiss="offcanvas">À propos</a>
+      <a href="index.html#business-units" data-bs-dismiss="offcanvas">Pôles</a>
+      <a href="index.html#services" data-bs-dismiss="offcanvas">Services</a>
+      <a href="medias-evenements.html" data-bs-dismiss="offcanvas">Médias &amp; Événements</a>
+      <a href="blog-cybersecurite.html" data-bs-dismiss="offcanvas">Blog Cybersécurité</a>
+      <a href="index.html#contact" data-bs-dismiss="offcanvas">Contact</a>
+    </nav>
+
+    <div class="mobile-nav-footer">
+      <a href="devis.html" class="btn-gold" data-bs-dismiss="offcanvas">Demander un devis</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== ARTICLE : EN-TÊTE ===================== -->
+<section class="art-hero">
+  <div class="art-hero-media" style="background-image:url('https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1800');"></div>
+  <div class="art-hero-overlay"></div>
+  <div class="container-xl art-hero-inner">
+    <nav class="art-breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a><span aria-hidden="true">/</span><a href="blog-cybersecurite.html">Blog</a><span aria-hidden="true">/</span><span>Zero Trust</span>
+    </nav>
+    <div class="art-hero-kicker"><span class="hero-kicker-line"></span>Réseau &amp; Zero Trust</div>
+    <h1 class="art-hero-title">Zero Trust : par où commencer quand on est une PME</h1>
+    <p class="art-hero-lead">Pas besoin d'un grand projet pour adopter les principes du Zero Trust. Les premières étapes réalistes pour vérifier chaque accès, sans bloquer la productivité.</p>
+    <div class="art-hero-meta">
+      <span class="art-author"><img src="images/logo_open.png" alt="" class="art-author-logo"><span><strong>Équipe OpenCloud</strong><small>Experts cybersécurité · Dakar</small></span></span>
+      <span class="art-meta-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5 min de lecture</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ARTICLE : CORPS ===================== -->
+<section class="art-body-section">
+  <div class="container-xl">
+    <div class="art-layout">
+      <aside class="art-aside">
+        <div class="art-toc">
+          <div class="art-toc-title">Sommaire</div>
+          <div class="art-toc-progress" aria-hidden="true"><span id="artProgress"></span></div>
+          <ol class="art-toc-list" id="artToc">
+          <li><a href="#idees-recues"><span class="art-toc-num">01</span><span>Trois idées reçues à oublier</span></a></li>
+          <li><a href="#principes"><span class="art-toc-num">02</span><span>Les trois principes à garder en tête</span></a></li>
+          <li><a href="#feuille-de-route"><span class="art-toc-num">03</span><span>Une feuille de route réaliste en six étapes</span></a></li>
+          <li><a href="#productivite"><span class="art-toc-num">04</span><span>Sécuriser sans freiner les équipes</span></a></li>
+          <li><a href="#mesurer"><span class="art-toc-num">05</span><span>Comment savoir si l'on progresse</span></a></li>
+          <li><a href="#en-resume"><span class="art-toc-num">06</span><span>En résumé</span></a></li>
+          </ol>
+        </div>
+        <div class="art-share">
+          <div class="art-toc-title">Partager</div>
+          <div class="art-share-row">
+            <button type="button" class="art-share-btn" id="artCopyLink" aria-label="Copier le lien de l'article"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Copier le lien</span></button>
+            <a class="art-share-icon" id="artShareLinkedin" href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8z"/></svg></a>
+            <a class="art-share-icon" id="artShareWhatsapp" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Partager sur WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="art-aside-cta">
+          <span class="art-aside-cta-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <strong>Un doute sur votre sécurité&nbsp;?</strong>
+          <p>Nos experts évaluent votre situation et vous proposent un plan d'action concret.</p>
+          <a href="devis.html" class="art-aside-cta-btn">Demander un audit<span aria-hidden="true">→</span></a>
+        </div>
+        <div class="art-aside-next">
+          <div class="art-toc-title">À lire ensuite</div>
+          <a href="article-segmentation-reseau.html" class="art-next-link"><span class="art-next-tag">Réseau</span><span class="art-next-title">Pourquoi segmenter votre réseau change tout en cas d'incident</span></a>
+          <a href="article-mot-de-passe-mfa.html" class="art-next-link"><span class="art-next-tag">Bonnes pratiques</span><span class="art-next-title">Mot de passe, MFA, gestionnaire : le trio à imposer dans votre entreprise</span></a>
+        </div>
+      </aside>
+
+      <article class="art-prose" id="artProse">
+<p class="art-dropcap">Pendant des années, la sécurité informatique a fonctionné comme un château fort&nbsp;: un pare-feu solide à l'entrée, et une confiance quasi totale une fois à l'intérieur. Ce modèle ne tient plus. Vos applications sont dans le cloud, vos équipes travaillent depuis la maison, le client ou l'aéroport, et un attaquant qui a volé un seul mot de passe se retrouve «&nbsp;à l'intérieur&nbsp;» avec les mêmes droits que votre collaborateur.</p>
+<p>Le Zero Trust part d'un principe inverse&nbsp;: <strong>ne jamais faire confiance par défaut, toujours vérifier</strong>. Chaque accès est évalué selon l'identité de l'utilisateur, l'état de son appareil et la ressource demandée — que la connexion vienne du bureau ou de l'extérieur.</p>
+
+<h2 id="idees-recues">Trois idées reçues à oublier</h2>
+<ul class="art-checklist art-checklist-warn">
+  <li><strong>«&nbsp;Le Zero Trust est un produit.&nbsp;»</strong> C'est une démarche. Des outils l'accompagnent, mais aucun ne la rend automatique.</li>
+  <li><strong>«&nbsp;C'est réservé aux grands groupes.&nbsp;»</strong> Les PME en tirent souvent un bénéfice plus rapide, car leur système d'information est plus simple à cartographier.</li>
+  <li><strong>«&nbsp;Il faut tout refaire.&nbsp;»</strong> On avance par étapes, en commençant par les accès les plus sensibles, sans remplacer l'existant du jour au lendemain.</li>
+</ul>
+
+<h2 id="principes">Les trois principes à garder en tête</h2>
+<div class="art-figures">
+  <div><strong>01</strong><span>Vérifier explicitement chaque accès&nbsp;: identité, appareil, contexte</span></div>
+  <div><strong>02</strong><span>Accorder le moindre privilège, juste ce qu'il faut, le temps qu'il faut</span></div>
+  <div><strong>03</strong><span>Partir du principe que la brèche a déjà eu lieu, et limiter son rayon d'action</span></div>
+</div>
+<p>Ces principes sont formalisés dans le cadre de référence du NIST (SP&nbsp;800-207), mais ils se traduisent très simplement dans le quotidien d'une PME.</p>
+
+<h2 id="feuille-de-route">Une feuille de route réaliste en six étapes</h2>
+<ol class="art-steps">
+  <li><h3>Inventorier identités, appareils et applications</h3><p>Qui accède à quoi, depuis quels appareils&nbsp;? Listez vos comptes (y compris les comptes de service et les anciens collaborateurs encore actifs), vos postes et vos applications critiques. On ne protège bien que ce que l'on connaît.</p></li>
+  <li><h3>Généraliser l'authentification multifacteur</h3><p>C'est l'étape au meilleur rapport effort/impact. Commencez par la messagerie, l'accès distant (VPN), les consoles d'administration et les applications financières. Un mot de passe volé ne suffit alors plus à entrer.</p></li>
+  <li><h3>Réduire les privilèges</h3><p>Supprimez les droits administrateur locaux des postes utilisateurs, séparez les comptes d'administration des comptes du quotidien, et revoyez les accès aux partages de fichiers. Des outils de gestion des identités comme ADManager Plus ou ADAudit Plus aident à repérer les comptes inactifs et les droits excessifs dans Active Directory.</p></li>
+  <li><h3>Remplacer l'accès «&nbsp;tout le réseau&nbsp;» par l'accès «&nbsp;à une application&nbsp;»</h3><p>Le VPN classique donne accès à tout le réseau. Une solution d'accès Zero Trust (ZTNA), comme Cloudflare Zero Trust ou Prisma Access, publie uniquement les applications autorisées, après vérification de l'identité et de l'appareil. L'utilisateur ne «&nbsp;voit&nbsp;» plus le reste du réseau.</p></li>
+  <li><h3>Segmenter le réseau interne</h3><p>Séparez les serveurs, les postes, les sauvegardes, les équipements d'administration et le Wi-Fi invités. Si un poste est compromis, l'attaquant ne peut pas rebondir librement vers les serveurs critiques.</p></li>
+  <li><h3>Surveiller et ajuster en continu</h3><p>Centralisez les journaux d'authentification et d'accès dans un SIEM (par exemple Log360) pour détecter les comportements anormaux&nbsp;: connexions à 3&nbsp;h du matin, depuis un pays inhabituel, ou échecs répétés.</p></li>
+</ol>
+
+<aside class="art-callout"><span class="art-callout-label">À retenir</span><p>Si vous ne deviez faire qu'une chose ce trimestre&nbsp;: activer l'authentification multifacteur sur la messagerie et l'accès distant. C'est la mesure qui bloque le plus grand nombre d'attaques courantes, pour un effort limité.</p></aside>
+
+<h2 id="productivite">Sécuriser sans freiner les équipes</h2>
+<p>Un projet Zero Trust échoue rarement pour des raisons techniques. Il échoue quand les utilisateurs le contournent parce qu'il les ralentit. Quelques règles pour l'éviter&nbsp;:</p>
+<ul class="art-checklist">
+  <li>Privilégier l'authentification unique (SSO)&nbsp;: une connexion forte, puis un accès fluide aux applications autorisées.</li>
+  <li>Adapter la vérification au risque&nbsp;: moins de sollicitations depuis un poste géré au bureau, davantage depuis un appareil inconnu.</li>
+  <li>Expliquer le «&nbsp;pourquoi&nbsp;» avant de déployer, et accompagner les premières semaines.</li>
+  <li>Piloter d'abord avec un service volontaire, puis étendre.</li>
+</ul>
+
+<h2 id="mesurer">Comment savoir si l'on progresse</h2>
+<div class="art-table-wrap">
+<table class="art-table">
+  <thead><tr><th>Indicateur</th><th>Objectif à 6 mois</th></tr></thead>
+  <tbody>
+    <tr><td>Comptes protégés par MFA</td><td>100&nbsp;% des comptes à privilèges, et au minimum la messagerie de tous</td></tr>
+    <tr><td>Utilisateurs administrateurs de leur poste</td><td>Proche de zéro, avec une procédure d'élévation encadrée</td></tr>
+    <tr><td>Comptes inactifs depuis plus de 90&nbsp;jours</td><td>Désactivés ou justifiés</td></tr>
+    <tr><td>Applications accessibles sans passer par le VPN global</td><td>Les applications critiques publiées via un accès Zero Trust</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="art-summary">
+  <h2 id="en-resume">En résumé</h2>
+  <ul>
+    <li>Le Zero Trust est une démarche progressive, pas un produit ni un chantier géant.</li>
+    <li>Commencez par l'inventaire, la MFA et la réduction des privilèges.</li>
+    <li>Donnez accès à des applications, plus à tout le réseau.</li>
+    <li>Segmentez, surveillez, et mesurez vos progrès trimestre après trimestre.</li>
+  </ul>
+</div>
+        <div class="art-cta">
+          <div>
+            <div class="art-cta-eyebrow"><span class="hero-kicker-line"></span>Passer à l'action</div>
+            <h2 class="art-cta-title">Besoin d'un regard expert sur votre situation&nbsp;?</h2>
+            <p>Nos ingénieurs évaluent votre environnement et vous proposent un plan d'action concret, avec une preuve de concept gratuite et sans engagement.</p>
+          </div>
+          <div class="art-cta-actions">
+            <a href="devis.html" class="btn-gold btn-arrow">Demander un devis</a>
+            <a href="index.html#contact" class="art-cta-link">Parler à un expert<span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="art-author-box">
+          <img src="images/logo_open.png" alt="" class="art-author-box-logo">
+          <div>
+            <strong>Équipe OpenCloud</strong>
+            <p>Intégrateur cybersécurité et infrastructures IT à Dakar, partenaire ManageEngine, Palo Alto Networks, Cloudflare et Veeam. Nos articles s'appuient sur ce que nous observons chaque jour sur le terrain, chez nos clients publics et privés.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== À LIRE AUSSI ===================== -->
+<section class="section art-related">
+  <div class="container-xl">
+    <div class="art-related-head">
+      <div>
+        <div class="art-hero-kicker art-related-kicker"><span class="hero-kicker-line"></span>Continuer la lecture</div>
+        <h2 class="section-title">À lire aussi</h2>
+      </div>
+      <a href="blog-cybersecurite.html" class="bu-more">Tous les articles<span aria-hidden="true">→</span></a>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <a href="article-segmentation-reseau.html" class="blog-card art-related-card">
+          <div class="blog-card-media" style="background-image:url('https://images.pexels.com/photos/2881233/pexels-photo-2881233.jpeg?auto=compress&cs=tinysrgb&w=800'), linear-gradient(135deg, var(--teal-soft), var(--paper-dim));"><span class="media-tag">Réseau</span></div>
+          <div class="blog-card-body">
+            <h3>Pourquoi segmenter votre réseau change tout en cas d'incident</h3>
+            <span class="art-related-meta">4 min de lecture</span>
+            <span class="bu-more">Lire l'article<span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a href="article-mot-de-passe-mfa.html" class="blog-card art-related-card">
+          <div class="blog-card-media" style="background-image:url('https://images.pexels.com/photos/17155842/pexels-photo-17155842.jpeg?auto=compress&cs=tinysrgb&w=800'), linear-gradient(135deg, var(--teal-soft), var(--paper-dim));"><span class="media-tag">Bonnes pratiques</span></div>
+          <div class="blog-card-body">
+            <h3>Mot de passe, MFA, gestionnaire : le trio à imposer dans votre entreprise</h3>
+            <span class="art-related-meta">5 min de lecture</span>
+            <span class="bu-more">Lire l'article<span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a href="article-reconnaitre-phishing.html" class="blog-card art-related-card">
+          <div class="blog-card-media" style="background-image:url('https://images.pexels.com/photos/7821760/pexels-photo-7821760.jpeg?auto=compress&cs=tinysrgb&w=800'), linear-gradient(135deg, var(--teal-soft), var(--paper-dim));"><span class="media-tag">Sensibilisation</span></div>
+          <div class="blog-card-body">
+            <h3>5 réflexes pour reconnaître un email de phishing</h3>
+            <span class="art-related-meta">5 min de lecture</span>
+            <span class="bu-more">Lire l'article<span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <span class="hero-frame hero-frame-tl" aria-hidden="true"></span>
+  <span class="hero-frame hero-frame-br" aria-hidden="true"></span>
+  <span class="footer-spotlight" aria-hidden="true"></span>
+  <span class="footer-watermark" aria-hidden="true">OpenCloud</span>
+
+  <div class="container-xl">
+    <div class="footer-lead">
+      <p class="footer-lead-eyebrow">Un projet&nbsp;? Discutons-en.</p>
+      <a href="mailto:contact@opencloud.sn" class="footer-lead-email">
+        contact@opencloud.sn
+        <span class="footer-lead-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-lg-4 footer-col">
+        <div class="brand mb-2" style="color:var(--paper);">
+          <img src="images/logo_open.png" alt="OpenCloud SN" class="brand-logo brand-logo-lg">OpenCloud
+        </div>
+        <span class="footer-brand-rule"></span>
+        <p class="footer-tagline">Intégrateur de solutions IT, cloud et cybersécurité pour les entreprises sénégalaises et africaines.</p>
+
+        <div class="footer-clock">
+          <span class="footer-clock-dot" aria-hidden="true"></span>
+          <span id="footerClockTime">--:--:--</span>
+          <span class="footer-clock-tz">Heure locale · Dakar (GMT)</span>
+        </div>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" class="icon-facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="X" class="icon-x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7.2l-5.6-6.9L4 22H1l8.2-9.4L.7 2h7.4l5.1 6.3L18.9 2zm-1.3 18h2L7.5 4H5.4l12.2 16z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" class="icon-linkedin"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="icon-instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-2.7 0-3.05.01-4.12.06-1.06.05-1.79.22-2.43.47-.66.26-1.22.6-1.77 1.16-.56.55-.9 1.11-1.16 1.77-.25.64-.42 1.37-.47 2.43C2 8.95 2 9.3 2 12s.01 3.05.06 4.12c.05 1.06.22 1.79.47 2.43.26.66.6 1.22 1.16 1.77.55.56 1.11.9 1.77 1.16.64.25 1.37.42 2.43.47C8.95 22 9.3 22 12 22s3.05-.01 4.12-.06c1.06-.05 1.79-.22 2.43-.47.66-.26 1.22-.6 1.77-1.16.56-.55.9-1.11 1.16-1.77.25-.64.42-1.37.47-2.43.05-1.07.06-1.42.06-4.12s-.01-3.05-.06-4.12c-.05-1.06-.22-1.79-.47-2.43-.26-.66-.6-1.22-1.16-1.77-.55-.56-1.11-.9-1.77-1.16-.64-.25-1.37-.42-2.43-.47C15.05 2.01 14.7 2 12 2zm0 1.8c2.67 0 2.99.01 4.04.06.97.04 1.5.21 1.85.35.47.18.8.4 1.15.75.35.35.57.68.75 1.15.14.35.31.88.35 1.85.05 1.05.06 1.37.06 4.04s-.01 2.99-.06 4.04c-.04.97-.21 1.5-.35 1.85-.18.47-.4.8-.75 1.15-.35.35-.68.57-1.15.75-.35.14-.88.31-1.85.35-1.05.05-1.37.06-4.04.06s-2.99-.01-4.04-.06c-.97-.04-1.5-.21-1.85-.35-.47-.18-.8-.4-1.15-.75-.35-.35-.57-.68-.75-1.15-.14-.35-.31-.88-.35-1.85C3.81 14.99 3.8 14.67 3.8 12s.01-2.99.06-4.04c.04-.97.21-1.5.35-1.85.18-.47.4-.8.75-1.15.35-.35.68-.57 1.15-.75.35-.14.88-.31 1.85-.35C9.01 3.81 9.33 3.8 12 3.8zm0 3.05A5.15 5.15 0 1 0 17.15 12 5.15 5.15 0 0 0 12 6.85zm0 8.5A3.35 3.35 0 1 1 15.35 12 3.35 3.35 0 0 1 12 15.35zm5.35-8.7a1.2 1.2 0 1 1-1.2-1.2 1.2 1.2 0 0 1 1.2 1.2z"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2 footer-col">
+        <h5>Services</h5>
+        <p><a href="index.html#services">Audit et conseils IT</a></p>
+        <p><a href="index.html#services">Formation</a></p>
+        <p><a href="index.html#services">Déploiement Datacenter</a></p>
+        <p><a href="index.html#services">Infogérance</a></p>
+      </div>
+      <div class="col-6 col-lg-2 footer-col">
+        <h5>Entreprise</h5>
+        <p><a href="index.html#a-propos">À propos</a></p>
+        <p><a href="index.html#business-units">Pôles</a></p>
+        <p><a href="index.html#offres">Nos offres</a></p>
+        <p><a href="index.html#secteurs">Secteurs</a></p>
+        <p><a href="medias-evenements.html">Médias &amp; Événements</a></p>
+        <p><a href="blog-cybersecurite.html">Blog Cybersécurité</a></p>
+        <p><a href="index.html#contact">Contact</a></p>
+      </div>
+      <div class="col-lg-4 footer-col">
+        <h5>Restons en contact</h5>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span>Liberté 6 Extension, près de Auchan, Dakar<span class="footer-coords">14.7167° N · 17.4677° W</span></span>
+          </div>
+          <div class="footer-contact-item footer-copy" data-copy="contact@opencloud.sn" tabindex="0" role="button">
+            <span class="footer-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <span>contact@opencloud.sn</span>
+            <span class="footer-copy-hint" aria-hidden="true">Copier</span>
+          </div>
+          <div class="footer-contact-item footer-copy" data-copy="+221 77 090 19 19" tabindex="0" role="button">
+            <span class="footer-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+            <span>+221 77 090 19 19 · +221 33 823 95 92</span>
+            <span class="footer-copy-hint" aria-hidden="true">Copier</span>
+          </div>
+        </div>
+        <a href="index.html#contact" class="footer-cta">Nous écrire<span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap align-items-center justify-content-between gap-2">
+      <span>© 2025-2026 MS DIGITAL. Tous droits réservés.</span>
+      <span class="footer-legal"><a href="#">Mentions légales</a><span class="footer-dot"></span><a href="#">Conditions générales</a></span>
+      <a href="#" class="footer-top" aria-label="Retour en haut de page">
+        <span aria-hidden="true">↑</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="bootstrap.bundle.min.js"></script>
+<script src="footer.js"></script>
+<script src="article.js"></script>
+</body>
+</html>

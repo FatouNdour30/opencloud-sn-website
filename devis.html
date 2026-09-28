@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demander un devis — OpenCloud SN</title>
+<meta name="description" content="Obtenez un devis personnalisé pour votre projet IT, cloud ou cybersécurité. Décrivez votre besoin en quelques étapes, un expert OpenCloud vous recontacte sous 24h ouvrées.">
+<link rel="icon" type="image/png" href="images/logo_open.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container-xl d-flex align-items-center justify-content-between">
+    <a href="index.html" class="brand"><img src="images/logo_open.png" alt="OpenCloud SN" class="brand-logo">OpenCloud</a>
+
+    <nav class="d-none d-lg-flex align-items-center">
+      <a href="index.html#a-propos" class="nav-link-custom">À propos</a>
+      <a href="index.html#business-units" class="nav-link-custom">Pôles</a>
+      <a href="index.html#services" class="nav-link-custom">Services</a>
+      <div class="nav-dropdown dropdown">
+        <button class="nav-link-custom nav-dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Ressources<span class="nav-dropdown-caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown-menu nav-dropdown-menu">
+          <li><a class="dropdown-item" href="medias-evenements.html">Médias &amp; Événements</a></li>
+          <li><a class="dropdown-item" href="blog-cybersecurite.html">Blog Cybersécurité</a></li>
+        </ul>
+      </div>
+      <a href="index.html#contact" class="nav-link-custom">Contact</a>
+    </nav>
+
+    <div class="d-flex align-items-center gap-3">
+      <a href="devis.html" class="btn-gold d-none d-lg-inline-flex">Demander un devis</a>
+      <button type="button" class="nav-burger d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MENU MOBILE ===================== -->
+<div class="offcanvas offcanvas-end mobile-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+  <div class="offcanvas-header">
+    <a href="index.html" class="brand" style="color:var(--paper);"><img src="images/logo_open.png" alt="OpenCloud SN" class="brand-logo" style="height:38px;">OpenCloud</a>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+  </div>
+  <div class="offcanvas-body">
+    <nav class="mobile-nav-links">
+      <a href="index.html#a-propos" data-bs-dismiss="offcanvas">À propos</a>
+      <a href="index.html#business-units" data-bs-dismiss="offcanvas">Pôles</a>
+      <a href="index.html#services" data-bs-dismiss="offcanvas">Services</a>
+      <a href="medias-evenements.html" data-bs-dismiss="offcanvas">Médias &amp; Événements</a>
+      <a href="blog-cybersecurite.html" data-bs-dismiss="offcanvas">Blog Cybersécurité</a>
+      <a href="index.html#contact" data-bs-dismiss="offcanvas">Contact</a>
+    </nav>
+
+    <div class="mobile-nav-footer">
+      <a href="devis.html" class="btn-gold" data-bs-dismiss="offcanvas">Demander un devis</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="quote-hero">
+  <div class="container-xl quote-hero-inner">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7">
+        <div class="quote-hero-kicker"><span class="hero-kicker-line"></span>Demande de devis</div>
+        <h1 class="quote-hero-title">Un projet IT&nbsp;? <span class="hl">Obtenez la bonne réponse.</span></h1>
+        <p class="quote-hero-sub">Décrivez votre besoin en quatre étapes simples. Un expert OpenCloud analyse votre demande et vous recontacte avec une proposition adaptée à votre budget et à votre calendrier.</p>
+
+        <div class="quote-hero-trust">
+          <div class="quote-trust-item">
+            <span class="quote-trust-num">24h</span>
+            <span class="quote-trust-lbl">Délai de première réponse</span>
+          </div>
+          <div class="quote-trust-item">
+            <span class="quote-trust-num">100%</span>
+            <span class="quote-trust-lbl">Gratuit &amp; sans engagement</span>
+          </div>
+          <div class="quote-trust-item">
+            <span class="quote-trust-num">15+</span>
+            <span class="quote-trust-lbl">Experts certifiés</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="about-media">
+          <span class="blog-hero-frame blog-hero-frame-tl" aria-hidden="true"></span>
+          <span class="blog-hero-frame blog-hero-frame-br" aria-hidden="true"></span>
+          <div class="about-media-frame" role="img" aria-label="Allée de baies serveurs dans un datacenter" style="background-image:url('images/bu-datacenter-banner.jpg'), linear-gradient(135deg, var(--ink-soft), var(--ink)); background-position:center;"></div>
+          <div class="about-badge">
+            <div class="about-badge-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div>
+              <strong>Réponse sous 24h</strong>
+              <p>Un expert OpenCloud analyse votre demande et revient vers vous rapidement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FORMULAIRE EN ÉTAPES ===================== -->
+<section class="section quote-form-section" style="background:#fff;">
+  <div class="container-xl">
+    <div class="quote-shell">
+      <div class="row g-0">
+
+        <div class="col-lg-4 quote-sidebar">
+          <div class="quote-steps" id="quoteSteps">
+            <div class="quote-step is-active" data-step="1">
+              <span class="quote-step-num">01</span>
+              <div>
+                <div class="quote-step-title">Votre besoin</div>
+                <div class="quote-step-desc">Le service recherché</div>
+              </div>
+            </div>
+            <div class="quote-step" data-step="2">
+              <span class="quote-step-num">02</span>
+              <div>
+                <div class="quote-step-title">Votre projet</div>
+                <div class="quote-step-desc">Budget, délai, contexte</div>
+              </div>
+            </div>
+            <div class="quote-step" data-step="3">
+              <span class="quote-step-num">03</span>
+              <div>
+                <div class="quote-step-title">Coordonnées</div>
+                <div class="quote-step-desc">Comment vous joindre</div>
+              </div>
+            </div>
+            <div class="quote-step" data-step="4">
+              <span class="quote-step-num">04</span>
+              <div>
+                <div class="quote-step-title">Récapitulatif</div>
+                <div class="quote-step-desc">Vérifiez et envoyez</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-sidebar-note">
+            <strong>Ce qui se passe ensuite</strong>
+            <p>Nous étudions votre demande, un expert vous contacte pour affiner le besoin, puis vous recevez une proposition détaillée sous 48h.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-8 quote-panel">
+          <form id="quoteForm" novalidate>
+
+            <!-- STEP 1 : BESOIN -->
+            <div class="quote-step-panel is-active" data-step-panel="1">
+              <div class="quote-panel-head">
+                <span class="quote-panel-eyebrow">Étape 01 / 04</span>
+                <h2>Quel est votre besoin&nbsp;?</h2>
+                <p>Sélectionnez le service qui correspond le mieux à votre projet.</p>
+              </div>
+              <div class="quote-service-grid" id="quoteServiceGrid">
+                <button type="button" class="quote-service-card" data-value="Audit et conseils IT">
+                  <span class="quote-service-index">01</span>
+                  <span class="quote-service-label">Audit et conseils IT</span>
+                </button>
+                <button type="button" class="quote-service-card" data-value="Formation">
+                  <span class="quote-service-index">02</span>
+                  <span class="quote-service-label">Formation</span>
+                </button>
+                <button type="button" class="quote-service-card" data-value="Déploiement de Datacenter">
+                  <span class="quote-service-index">03</span>
+                  <span class="quote-service-label">Déploiement de Datacenter</span>
+                </button>
+                <button type="button" class="quote-service-card" data-value="Service d'Infogérance">
+                  <span class="quote-service-index">04</span>
+                  <span class="quote-service-label">Service d'Infogérance</span>
+                </button>
+                <button type="button" class="quote-service-card" data-value="Maintenance et support">
+                  <span class="quote-service-index">05</span>
+                  <span class="quote-service-label">Maintenance et support</span>
+                </button>
+                <button type="button" class="quote-service-card" data-value="Sécurité du réseau et des Endpoints">
+                  <span class="quote-service-index">06</span>
+                  <span class="quote-service-label">Sécurité réseau &amp; Endpoints</span>
+                </button>
+                <button type="button" class="quote-service-card" data-value="Autre demande">
+                  <span class="quote-service-index">07</span>
+                  <span class="quote-service-label">Autre demande</span>
+                </button>
+              </div>
+              <p class="quote-step-error" id="quoteStep1Error" hidden>Merci de sélectionner un service avant de continuer.</p>
+            </div>
+
+            <!-- STEP 2 : PROJET -->
+            <div class="quote-step-panel" data-step-panel="2">
+              <div class="quote-panel-head">
+                <span class="quote-panel-eyebrow">Étape 02 / 04</span>
+                <h2>Parlons de votre projet</h2>
+                <p>Ces informations nous aident à préparer une proposition pertinente.</p>
+              </div>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <label class="form-label">Budget estimé</label>
+                  <select class="form-select" id="quoteBudget">
+                    <option value="">Sélectionnez une fourchette</option>
+                    <option>Moins de 2 000 000 FCFA</option>
+                    <option>2 000 000 – 10 000 000 FCFA</option>
+                    <option>10 000 000 – 30 000 000 FCFA</option>
+                    <option>Plus de 30 000 000 FCFA</option>
+                    <option>À définir avec un expert</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Délai souhaité</label>
+                  <select class="form-select" id="quoteTimeline">
+                    <option value="">Sélectionnez un délai</option>
+                    <option>Urgent (moins d'un mois)</option>
+                    <option>1 à 3 mois</option>
+                    <option>3 à 6 mois</option>
+                    <option>Pas de contrainte de délai</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Décrivez votre projet</label>
+                  <textarea class="form-control" id="quoteMessage" rows="4" placeholder="Contexte, objectifs, contraintes techniques…"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3 : COORDONNÉES -->
+            <div class="quote-step-panel" data-step-panel="3">
+              <div class="quote-panel-head">
+                <span class="quote-panel-eyebrow">Étape 03 / 04</span>
+                <h2>Vos coordonnées</h2>
+                <p>Pour vous recontacter avec la proposition la plus adaptée.</p>
+              </div>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <label class="form-label">Nom complet</label>
+                  <input type="text" class="form-control" id="quoteName" placeholder="Votre nom" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Entreprise</label>
+                  <input type="text" class="form-control" id="quoteCompany" placeholder="Nom de votre entreprise">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" id="quoteEmail" placeholder="vous@entreprise.sn" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Téléphone</label>
+                  <input type="tel" class="form-control" id="quotePhone" placeholder="+221 77 000 00 00" required>
+                </div>
+              </div>
+              <p class="quote-step-error" id="quoteStep3Error" hidden>Merci de renseigner votre nom, votre email et votre téléphone.</p>
+            </div>
+
+            <!-- STEP 4 : RÉCAPITULATIF -->
+            <div class="quote-step-panel" data-step-panel="4">
+              <div class="quote-panel-head">
+                <span class="quote-panel-eyebrow">Étape 04 / 04</span>
+                <h2>Vérifiez votre demande</h2>
+                <p>Relisez le récapitulatif avant l'envoi.</p>
+              </div>
+              <div class="quote-summary" id="quoteSummary">
+                <div class="quote-summary-row">
+                  <span>Service souhaité</span>
+                  <strong id="summaryService">—</strong>
+                </div>
+                <div class="quote-summary-row">
+                  <span>Budget estimé</span>
+                  <strong id="summaryBudget">—</strong>
+                </div>
+                <div class="quote-summary-row">
+                  <span>Délai souhaité</span>
+                  <strong id="summaryTimeline">—</strong>
+                </div>
+                <div class="quote-summary-row">
+                  <span>Contact</span>
+                  <strong id="summaryContact">—</strong>
+                </div>
+              </div>
+              <label class="quote-consent">
+                <input type="checkbox" id="quoteConsent" required>
+                <span>J'accepte d'être contacté par OpenCloud SN au sujet de ma demande.</span>
+              </label>
+              <p class="quote-step-error" id="quoteStep4Error" hidden>Merci de cocher la case de consentement.</p>
+            </div>
+
+            <div class="quote-nav">
+              <button type="button" class="btn-outline-ink quote-prev" id="quotePrev" disabled>&larr; Précédent</button>
+              <button type="button" class="btn-gold btn-arrow quote-next" id="quoteNext">Continuer</button>
+              <button type="submit" class="btn-gold quote-submit" id="quoteSubmit" hidden>Envoyer ma demande</button>
+            </div>
+          </form>
+
+          <!-- ÉTAT DE SUCCÈS -->
+          <div class="quote-success" id="quoteSuccess" hidden>
+            <div class="quote-success-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <h2>Merci&nbsp;! Votre demande a bien été envoyée.</h2>
+            <p>Notre équipe basée à Dakar analyse votre besoin et vous recontacte sous 24h ouvrées avec une proposition personnalisée.</p>
+            <a href="index.html" class="btn-outline-ink">Retour à l'accueil</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <span class="hero-frame hero-frame-tl" aria-hidden="true"></span>
+  <span class="hero-frame hero-frame-br" aria-hidden="true"></span>
+  <span class="footer-spotlight" aria-hidden="true"></span>
+  <span class="footer-watermark" aria-hidden="true">OpenCloud</span>
+
+  <div class="container-xl">
+    <div class="footer-lead">
+      <p class="footer-lead-eyebrow">Un projet&nbsp;? Discutons-en.</p>
+      <a href="mailto:contact@opencloud.sn" class="footer-lead-email">
+        contact@opencloud.sn
+        <span class="footer-lead-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-lg-4 footer-col">
+        <div class="brand mb-2" style="color:var(--paper);">
+          <img src="images/logo_open.png" alt="OpenCloud SN" class="brand-logo brand-logo-lg">OpenCloud
+        </div>
+        <span class="footer-brand-rule"></span>
+        <p class="footer-tagline">Intégrateur de solutions IT, cloud et cybersécurité pour les entreprises sénégalaises et africaines.</p>
+
+        <div class="footer-clock">
+          <span class="footer-clock-dot" aria-hidden="true"></span>
+          <span id="footerClockTime">--:--:--</span>
+          <span class="footer-clock-tz">Heure locale · Dakar (GMT)</span>
+        </div>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" class="icon-facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="X" class="icon-x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7.2l-5.6-6.9L4 22H1l8.2-9.4L.7 2h7.4l5.1 6.3L18.9 2zm-1.3 18h2L7.5 4H5.4l12.2 16z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" class="icon-linkedin"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="icon-instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-2.7 0-3.05.01-4.12.06-1.06.05-1.79.22-2.43.47-.66.26-1.22.6-1.77 1.16-.56.55-.9 1.11-1.16 1.77-.25.64-.42 1.37-.47 2.43C2 8.95 2 9.3 2 12s.01 3.05.06 4.12c.05 1.06.22 1.79.47 2.43.26.66.6 1.22 1.16 1.77.55.56 1.11.9 1.77 1.16.64.25 1.37.42 2.43.47C8.95 22 9.3 22 12 22s3.05-.01 4.12-.06c1.06-.05 1.79-.22 2.43-.47.66-.26 1.22-.6 1.77-1.16.56-.55.9-1.11 1.16-1.77.25-.64.42-1.37.47-2.43.05-1.07.06-1.42.06-4.12s-.01-3.05-.06-4.12c-.05-1.06-.22-1.79-.47-2.43-.26-.66-.6-1.22-1.16-1.77-.55-.56-1.11-.9-1.77-1.16-.64-.25-1.37-.42-2.43-.47C15.05 2.01 14.7 2 12 2zm0 1.8c2.67 0 2.99.01 4.04.06.97.04 1.5.21 1.85.35.47.18.8.4 1.15.75.35.35.57.68.75 1.15.14.35.31.88.35 1.85.05 1.05.06 1.37.06 4.04s-.01 2.99-.06 4.04c-.04.97-.21 1.5-.35 1.85-.18.47-.4.8-.75 1.15-.35.35-.68.57-1.15.75-.35.14-.88.31-1.85.35-1.05.05-1.37.06-4.04.06s-2.99-.01-4.04-.06c-.97-.04-1.5-.21-1.85-.35-.47-.18-.8-.4-1.15-.75-.35-.35-.57-.68-.75-1.15-.14-.35-.31-.88-.35-1.85C3.81 14.99 3.8 14.67 3.8 12s.01-2.99.06-4.04c.04-.97.21-1.5.35-1.85.18-.47.4-.8.75-1.15.35-.35.68-.57 1.15-.75.35-.14.88-.31 1.85-.35C9.01 3.81 9.33 3.8 12 3.8zm0 3.05A5.15 5.15 0 1 0 17.15 12 5.15 5.15 0 0 0 12 6.85zm0 8.5A3.35 3.35 0 1 1 15.35 12 3.35 3.35 0 0 1 12 15.35zm5.35-8.7a1.2 1.2 0 1 1-1.2-1.2 1.2 1.2 0 0 1 1.2 1.2z"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2 footer-col">
+        <h5>Services</h5>
+        <p><a href="index.html#services">Audit et conseils IT</a></p>
+        <p><a href="index.html#services">Formation</a></p>
+        <p><a href="index.html#services">Déploiement Datacenter</a></p>
+        <p><a href="index.html#services">Infogérance</a></p>
+      </div>
+      <div class="col-6 col-lg-2 footer-col">
+        <h5>Entreprise</h5>
+        <p><a href="index.html#a-propos">À propos</a></p>
+        <p><a href="index.html#business-units">Pôles</a></p>
+        <p><a href="index.html#offres">Nos offres</a></p>
+        <p><a href="index.html#secteurs">Secteurs</a></p>
+        <p><a href="medias-evenements.html">Médias &amp; Événements</a></p>
+        <p><a href="blog-cybersecurite.html">Blog Cybersécurité</a></p>
+        <p><a href="index.html#contact">Contact</a></p>
+      </div>
+      <div class="col-lg-4 footer-col">
+        <h5>Restons en contact</h5>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span>Liberté 6 Extension, près de Auchan, Dakar<span class="footer-coords">14.7167° N · 17.4677° W</span></span>
+          </div>
+          <div class="footer-contact-item footer-copy" data-copy="contact@opencloud.sn" tabindex="0" role="button">
+            <span class="footer-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <span>contact@opencloud.sn</span>
+            <span class="footer-copy-hint" aria-hidden="true">Copier</span>
+          </div>
+          <div class="footer-contact-item footer-copy" data-copy="+221 77 090 19 19" tabindex="0" role="button">
+            <span class="footer-contact-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+            <span>+221 77 090 19 19 · +221 33 823 95 92</span>
+            <span class="footer-copy-hint" aria-hidden="true">Copier</span>
+          </div>
+        </div>
+        <a href="index.html#contact" class="footer-cta">Nous écrire<span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap align-items-center justify-content-between gap-2">
+      <span>© 2025-2026 MS DIGITAL. Tous droits réservés.</span>
+      <span class="footer-legal"><a href="#">Mentions légales</a><span class="footer-dot"></span><a href="#">Conditions générales</a></span>
+      <a href="#" class="footer-top" aria-label="Retour en haut de page">
+        <span aria-hidden="true">↑</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="bootstrap.bundle.min.js"></script>
+<script src="footer.js"></script>
+<script>
+  var siteHeader = document.querySelector('.site-header');
+  var toggleHeader = function () {
+    siteHeader.classList.toggle('is-scrolled', window.scrollY > 40);
+  };
+  toggleHeader();
+  window.addEventListener('scroll', toggleHeader, { passive: true });
+
+  var scrollProgressEl = document.getElementById('scrollProgress');
+  if (scrollProgressEl) {
+    var updateScrollProgress = function () {
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      scrollProgressEl.style.width = pct + '%';
+    };
+    updateScrollProgress();
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    window.addEventListener('resize', updateScrollProgress);
+  }
+
+  (function () {
+    var TOTAL_STEPS = 4;
+    var current = 1;
+
+    var stepPanels = document.querySelectorAll('.quote-step-panel');
+    var stepItems = document.querySelectorAll('.quote-step');
+    var prevBtn = document.getElementById('quotePrev');
+    var nextBtn = document.getElementById('quoteNext');
+    var submitBtn = document.getElementById('quoteSubmit');
+    var quoteForm = document.getElementById('quoteForm');
+    var quotePanel = document.querySelector('.quote-panel');
+
+    var serviceGrid = document.getElementById('quoteServiceGrid');
+    var serviceCards = document.querySelectorAll('.quote-service-card');
+    var selectedService = '';
+
+    var step1Error = document.getElementById('quoteStep1Error');
+    var step3Error = document.getElementById('quoteStep3Error');
+    var step4Error = document.getElementById('quoteStep4Error');
+
+    function showStep(n, scroll) {
+      current = n;
+      stepPanels.forEach(function (panel) {
+        panel.classList.toggle('is-active', parseInt(panel.dataset.stepPanel, 10) === n);
+      });
+      stepItems.forEach(function (item) {
+        var sn = parseInt(item.dataset.step, 10);
+        item.classList.toggle('is-active', sn === n);
+        item.classList.toggle('is-done', sn < n);
+      });
+      prevBtn.disabled = n === 1;
+      nextBtn.hidden = n === TOTAL_STEPS;
+      submitBtn.hidden = n !== TOTAL_STEPS;
+      if (n === TOTAL_STEPS) fillSummary();
+      if (scroll && quotePanel) quotePanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function validateStep(n) {
+      if (n === 1) {
+        var ok1 = !!selectedService;
+        step1Error.hidden = ok1;
+        return ok1;
+      }
+      if (n === 3) {
+        var name = document.getElementById('quoteName').value.trim();
+        var email = document.getElementById('quoteEmail').value.trim();
+        var phone = document.getElementById('quotePhone').value.trim();
+        var ok3 = !!(name && email && phone);
+        step3Error.hidden = ok3;
+        return ok3;
+      }
+      return true;
+    }
+
+    serviceCards.forEach(function (card) {
+      card.addEventListener('click', function () {
+        serviceCards.forEach(function (c) { c.classList.remove('is-selected'); });
+        card.classList.add('is-selected');
+        selectedService = card.dataset.value;
+        step1Error.hidden = true;
+      });
+    });
+
+    nextBtn.addEventListener('click', function () {
+      if (!validateStep(current)) return;
+      if (current < TOTAL_STEPS) showStep(current + 1, true);
+    });
+
+    prevBtn.addEventListener('click', function () {
+      if (current > 1) showStep(current - 1, true);
+    });
+
+    stepItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+        var n = parseInt(item.dataset.step, 10);
+        if (n < current) showStep(n, true);
+      });
+    });
+
+    function fillSummary() {
+      document.getElementById('summaryService').textContent = selectedService || '—';
+      document.getElementById('summaryBudget').textContent = document.getElementById('quoteBudget').value || '—';
+      document.getElementById('summaryTimeline').textContent = document.getElementById('quoteTimeline').value || '—';
+      var name = document.getElementById('quoteName').value.trim();
+      var email = document.getElementById('quoteEmail').value.trim();
+      var phone = document.getElementById('quotePhone').value.trim();
+      var contact = [name, email, phone].filter(function (v) { return v; }).join(' · ');
+      document.getElementById('summaryContact').textContent = contact || '—';
+    }
+
+    quoteForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validateStep(1)) { showStep(1, true); return; }
+      if (!validateStep(3)) { showStep(3, true); return; }
+      var consent = document.getElementById('quoteConsent').checked;
+      step4Error.hidden = consent;
+      if (!consent) return;
+
+      quoteForm.hidden = true;
+      document.getElementById('quoteSuccess').hidden = false;
+    });
+
+    showStep(1);
+  })();
+</script>
+</body>
+</html>
