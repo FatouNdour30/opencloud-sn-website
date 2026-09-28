@@ -4795,8 +4795,8 @@ footer .footer-col p a:hover{ color: var(--gold); transform: translateX(2px); }
   .poc-modal-form-wrap{ padding: 2.4rem 1.6rem; }
 }
 @media (max-width: 575px){
-  .poc-modal-dialog{ margin: .8rem; }
-  .poc-modal-media{ min-height: 170px; }
+  .poc-modal-dialog{ margin: 2.2rem .8rem .8rem; }
+  .poc-modal-media{ min-height: 200px; }
   .poc-modal-media-content{ padding: 1.4rem 1.3rem; }
   .poc-modal-badge-icon{ margin-bottom: .7rem; }
   .poc-modal-quote,
@@ -4804,6 +4804,7 @@ footer .footer-col p a:hover{ color: var(--gold); transform: translateX(2px); }
   .poc-modal-tab{ display: none; }
   .poc-modal-media-stats{ padding-top: 0; border-top: none; }
   .poc-pole-grid{ grid-template-columns: 1fr; }
+  .poc-modal-close{ top: .7rem; right: .7rem; width: 34px; height: 34px; }
 }
 
 /* ---------- Barre de progression de lecture ---------- */
