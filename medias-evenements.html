@@ -234,6 +234,105 @@
           </div>
         </div>
       </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/open13.jpeg" alt="Événement Palo Alto Networks" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Séminaire Palo Alto Networks</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/open12.jpeg" alt="Événement Palo Alto Networks" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Atelier cybersécurité avec Palo Alto</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/open11.jpeg" alt="Événement Palo Alto Networks" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Échanges avec les experts Palo Alto</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/open6.jpeg" alt="Événement Palo Alto Networks" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Présentation des solutions Palo Alto Networks</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/open5.jpeg" alt="Événement Palo Alto Networks" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Networking avec Palo Alto Networks</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/open3.jpeg" alt="Événement Palo Alto Networks" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Session Q&amp;A Palo Alto Networks</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/open14.jpeg" alt="Événement Palo Alto Networks" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Intervention d'un expert Palo Alto Networks</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/open1.jpeg" alt="Événement Palo Alto Networks" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Clôture de l'événement Palo Alto Networks</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 media-item" data-category="evenement">
+        <div class="media-card">
+          <img src="images/open7.jpeg" alt="Événement Palo Alto Networks" loading="lazy">
+          <div class="media-card-overlay">
+            <span class="media-tag">Événement</span>
+            <h3 class="media-card-title">Temps d'échange Palo Alto Networks</h3>
+            <span class="media-card-date">Dakar</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -333,6 +432,22 @@
   </div>
 </footer>
 
+<div class="lightbox" id="mediaLightbox" role="dialog" aria-modal="true" aria-label="Visionneuse d'images">
+  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
+  <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Image précédente">&lsaquo;</button>
+  <div class="lightbox-stage">
+    <img src="" alt="" id="lightboxImg">
+    <video id="lightboxVideo" controls playsinline style="display:none;"></video>
+    <div class="lightbox-caption">
+      <span class="lightbox-tag" id="lightboxTag"></span>
+      <h3 id="lightboxTitle"></h3>
+      <span class="lightbox-date" id="lightboxDate"></span>
+    </div>
+  </div>
+  <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Image suivante">&rsaquo;</button>
+  <div class="lightbox-counter"><span id="lightboxCurrent">1</span> / <span id="lightboxTotal">1</span></div>
+</div>
+
 <script src="bootstrap.bundle.min.js"></script>
 <script>
   var siteHeader = document.querySelector('.site-header');
@@ -428,6 +543,99 @@
     video.addEventListener('mouseenter', function () { video.play(); });
     video.addEventListener('mouseleave', function () { video.pause(); });
   });
+
+  // ---------- Galerie : lightbox défilable ----------
+  var lightboxEl = document.getElementById('mediaLightbox');
+  if (lightboxEl) {
+    var lightboxImg = document.getElementById('lightboxImg');
+    var lightboxVideo = document.getElementById('lightboxVideo');
+    var lightboxTag = document.getElementById('lightboxTag');
+    var lightboxTitle = document.getElementById('lightboxTitle');
+    var lightboxDate = document.getElementById('lightboxDate');
+    var lightboxCurrent = document.getElementById('lightboxCurrent');
+    var lightboxTotal = document.getElementById('lightboxTotal');
+    var lightboxItems = [];
+    var lightboxIndex = 0;
+
+    var getMedia = function (item) {
+      return item.querySelector('.media-card img') || item.querySelector('.media-card video');
+    };
+
+    var updateLightbox = function () {
+      var item = lightboxItems[lightboxIndex];
+      if (!item) return;
+      var media = getMedia(item);
+      lightboxVideo.pause();
+      if (media.tagName === 'VIDEO') {
+        var sourceEl = media.querySelector('source');
+        lightboxVideo.src = sourceEl ? sourceEl.getAttribute('src') : media.getAttribute('src');
+        lightboxVideo.style.display = '';
+        lightboxImg.style.display = 'none';
+        lightboxVideo.play().catch(function () {});
+      } else {
+        lightboxImg.src = media.getAttribute('src');
+        lightboxImg.alt = media.getAttribute('alt') || '';
+        lightboxImg.style.display = '';
+        lightboxVideo.style.display = 'none';
+        lightboxVideo.removeAttribute('src');
+      }
+      var tag = item.querySelector('.media-tag');
+      var title = item.querySelector('.media-card-title');
+      var date = item.querySelector('.media-card-date');
+      lightboxTag.textContent = tag ? tag.textContent : '';
+      lightboxTitle.textContent = title ? title.textContent : '';
+      lightboxDate.textContent = date ? date.textContent : '';
+      lightboxCurrent.textContent = lightboxIndex + 1;
+      lightboxTotal.textContent = lightboxItems.length;
+    };
+
+    var openLightbox = function (item) {
+      lightboxItems = Array.prototype.filter.call(mediaItems, function (el) {
+        return el.style.display !== 'none' && getMedia(el);
+      });
+      lightboxIndex = lightboxItems.indexOf(item);
+      if (lightboxIndex === -1) lightboxIndex = 0;
+      updateLightbox();
+      lightboxEl.classList.add('is-active');
+      document.body.style.overflow = 'hidden';
+    };
+
+    var closeLightbox = function () {
+      lightboxEl.classList.remove('is-active');
+      document.body.style.overflow = '';
+      lightboxVideo.pause();
+      lightboxVideo.removeAttribute('src');
+    };
+
+    var stepLightbox = function (dir) {
+      if (!lightboxItems.length) return;
+      lightboxIndex = (lightboxIndex + dir + lightboxItems.length) % lightboxItems.length;
+      updateLightbox();
+    };
+
+    mediaItems.forEach(function (item) {
+      if (!getMedia(item)) return;
+      var card = item.querySelector('.media-card');
+      card.style.cursor = 'zoom-in';
+      card.addEventListener('click', function (e) {
+        e.preventDefault();
+        openLightbox(item);
+      });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightboxPrev').addEventListener('click', function () { stepLightbox(-1); });
+    document.getElementById('lightboxNext').addEventListener('click', function () { stepLightbox(1); });
+    lightboxEl.addEventListener('click', function (e) {
+      if (e.target === lightboxEl) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!lightboxEl.classList.contains('is-active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') stepLightbox(-1);
+      if (e.key === 'ArrowRight') stepLightbox(1);
+    });
+  }
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
